@@ -143,6 +143,51 @@ def display_value_bets(value_bets, limit=10):
         tablefmt="grid"
     ))
 
+def display_all_bookmaker_odds(games):
+    """Display all bookmaker odds for all games in a comprehensive table"""
+    all_rows = []
+    
+    for game in games:
+        game_time = game.commence_time.strftime("%Y-%m-%d %H:%M")
+        
+        # Get all odds for home team
+        home_odds = game.get_all_odds(game.home_team)
+        for odds_data in home_odds:
+            row = [
+                game_time,
+                f"{game.away_team} @ {game.home_team}",
+                game.home_team,
+                "Home",
+                odds_data['bookmaker'],
+                odds_data['odds'],
+                f"{(1/odds_data['odds']):.1%}"
+            ]
+            all_rows.append(row)
+            
+        # Get all odds for away team
+        away_odds = game.get_all_odds(game.away_team)
+        for odds_data in away_odds:
+            row = [
+                game_time,
+                f"{game.away_team} @ {game.home_team}",
+                game.away_team,
+                "Away",
+                odds_data['bookmaker'],
+                odds_data['odds'],
+                f"{(1/odds_data['odds']):.1%}"
+            ]
+            all_rows.append(row)
+    
+    # Sort by game time, then by game, then by team
+    all_rows.sort(key=lambda x: (x[0], x[1], x[2]))
+    
+    print("\nAll Bookmaker Odds:")
+    print(tabulate(
+        all_rows,
+        headers=["Game Time", "Game", "Team", "H/A", "Bookmaker", "Odds", "Implied Prob"],
+        tablefmt="grid"
+    ))
+
 def main():
     parser = argparse.ArgumentParser(description="MLB Odds Finder")
     parser.add_argument("--show-all", action="store_true", help="Show all games, not just today's")
@@ -153,6 +198,7 @@ def main():
     parser.add_argument("--min-odds", type=float, default=1.5, help="Minimum odds to consider for value bets")
     parser.add_argument("--max-odds", type=float, default=10.0, help="Maximum odds to consider for value bets")
     parser.add_argument("--date", type=str, help="Show games for a specific date (format: YYYY-MM-DD)")
+    parser.add_argument("--all-odds", action="store_true", help="Show all odds from all bookmakers for all games")
     
     args = parser.parse_args()
     
@@ -197,7 +243,9 @@ def main():
         logger.info(f"Filtered to {len(games)} games scheduled for today")
     
     # Display results
-    if args.team:
+    if args.all_odds:
+        display_all_bookmaker_odds(games)
+    elif args.team:
         # Find games with the specified team
         team_games = [game for game in games if args.team.lower() in game.home_team.lower() or args.team.lower() in game.away_team.lower()]
         
