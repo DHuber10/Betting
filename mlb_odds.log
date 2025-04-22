@@ -1,0 +1,31 @@
+2025-04-21 20:23:30,391 - MLBOdds - INFO - Fetching MLB odds from the API
+2025-04-21 20:23:30,729 - mlb_odds.api_client - INFO - API usage - Remaining requests: 498, Used requests: 2
+2025-04-21 20:23:30,733 - MLBOdds - INFO - Fetched odds for 20 MLB games
+2025-04-21 20:23:30,734 - MLBOdds - INFO - Filtered to 4 games scheduled for today
+2025-04-21 20:24:17,574 - MLBOdds - INFO - Fetching MLB odds from the API
+2025-04-21 20:24:17,777 - mlb_odds.api_client - INFO - API usage - Remaining requests: 497, Used requests: 3
+2025-04-21 20:24:17,780 - MLBOdds - INFO - Fetched odds for 20 MLB games
+2025-04-21 20:27:52,669 - MLBOdds - INFO - Fetching MLB odds from the API
+2025-04-21 20:27:52,931 - mlb_odds.api_client - INFO - API usage - Remaining requests: 496, Used requests: 4
+2025-04-21 20:27:52,933 - MLBOdds - INFO - Fetched odds for 20 MLB games
+2025-04-21 20:27:52,937 - MLBOdds - INFO - Filtered to 0 games scheduled for 2024-04-22
+2025-04-21 20:28:09,237 - MLBOdds - INFO - Fetching MLB odds from the API
+2025-04-21 20:28:09,446 - mlb_odds.api_client - INFO - API usage - Remaining requests: 495, Used requests: 5
+2025-04-21 20:28:09,448 - MLBOdds - INFO - Fetched odds for 20 MLB games
+2025-04-21 20:28:09,453 - MLBOdds - INFO - Filtered to 11 games scheduled for 2025-04-22
+2025-04-21 20:28:34,137 - MLBOdds - INFO - Fetching MLB odds from the API
+2025-04-21 20:28:34,288 - mlb_odds.api_client - INFO - API usage - Remaining requests: 494, Used requests: 6
+2025-04-21 20:28:34,289 - MLBOdds - INFO - Fetched odds for 20 MLB games
+2025-04-21 20:28:34,291 - MLBOdds - INFO - Filtered to 11 games scheduled for 2025-04-22
+2025-04-21 20:33:07,835 - MLBOdds - INFO - Fetching MLB odds from the API
+2025-04-21 20:33:08,070 - mlb_odds.api_client - INFO - API usage - Remaining requests: 493, Used requests: 7
+2025-04-21 20:33:08,073 - MLBOdds - INFO - Fetched odds for 19 MLB games
+2025-04-21 20:33:08,073 - MLBOdds - INFO - Filtered to 3 games scheduled for today
+2025-04-21 20:34:14,688 - MLBOdds - INFO - Fetching MLB odds from the API
+2025-04-21 20:34:14,860 - mlb_odds.api_client - INFO - API usage - Remaining requests: 492, Used requests: 8
+2025-04-21 20:34:14,861 - MLBOdds - INFO - Fetched odds for 19 MLB games
+2025-04-21 20:34:14,862 - MLBOdds - INFO - Filtered to 11 games scheduled for 2025-04-22
+2025-04-21 20:37:10,704 - MLBOdds - INFO - Fetching MLB odds from the API
+2025-04-21 20:37:10,964 - mlb_odds.api_client - INFO - API usage - Remaining requests: 491, Used requests: 9
+2025-04-21 20:37:10,968 - MLBOdds - INFO - Fetched odds for 19 MLB games
+2025-04-21 20:37:10,972 - MLBOdds - INFO - Filtered to 11 games scheduled for 2025-04-22

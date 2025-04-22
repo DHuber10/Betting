@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: mlb_odds
+Version: 0.1.0
+Summary: MLB betting odds analyzer
+Author: Your Name
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: python-dotenv
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary
